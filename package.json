@@ -1,0 +1,38 @@
+{
+  "name": "cli-agenda",
+  "version": "1.0.0",
+  "description": "A CLI-based calendar application.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js"
+  },
+  "types": "src/types",
+  "keywords": [],
+  "author": "Connor Deckers <@connordeckers>",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^2.0.0",
+    "@microsoft/microsoft-graph-types": "^1.20.0",
+    "@types/blessed": "^0.1.17",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.6.4",
+    "@types/superagent": "^4.1.10",
+    "@types/uuid": "^8.3.0",
+    "blessed": "^0.1.81",
+    "express": "^4.17.1",
+    "googleapis": "^59.0.0",
+    "keytar": "^6.0.1",
+    "moment": "^2.27.0",
+    "open": "^7.2.1",
+    "simple-oauth2": "^4.1.0",
+    "superagent": "^6.1.0",
+    "typescript": "^4.0.2",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connordeckers/cli-agenda"
+  }
+}
