@@ -1,5 +1,5 @@
-import { screen, Widgets } from "blessed";
-import { v4 as uuid } from "uuid";
+import { screen, Widgets } from 'blessed';
+import { v4 as uuid } from 'uuid';
 type Screen = Widgets.Screen;
 
 const elements: Component[] = [];
@@ -15,7 +15,7 @@ export class WindowManager {
 
   constructor(opts: Widgets.IScreenOptions & { exitKeys?: string[] } = {}) {
     this.win = screen(opts);
-    this.exitKeys = opts.exitKpeys ?? ["q", "C-c"];
+    this.exitKeys = opts.exitKpeys ?? ['q', 'C-c'];
     this.win.key(this.exitKeys, () => process.exit(0));
 
     this.win.key('escape', () => {
@@ -29,7 +29,7 @@ export class WindowManager {
     el.id ||= uuid();
     elements.push(el);
     el.onComponentRegister();
-    console.log(`Element registered with id "${el.id}"`);
+    // console.log(`Element registered with id "${el.id}"`);
     return el.id;
   }
 
@@ -37,15 +37,15 @@ export class WindowManager {
     // Either pass the element directly, or pass the key of the item.
     // This can either be manually created, or a generated UUID when the element was registered.
     const scr =
-      typeof element === "string"
+      typeof element === 'string'
         ? elements.find((s) => s.id == element)
-        : typeof element === "number"
-          ? elements[element]
-          : element
+        : typeof element === 'number'
+        ? elements[element]
+        : element;
 
     // If the screen component wasn't found, bail.
     if (!scr) {
-      console.error("Could not find element ", element);
+      console.error('Could not find element ', element);
       return false;
     }
 
@@ -100,7 +100,7 @@ export type KeyEvent = (e?: {
 
 export class Component {
   /** The ID of this window. */
-  public id: string = "";
+  public id: string = '';
   /**
    * The base renderer for this window (usually a box of some sort.)
    * Can be thought of as the "<body>" for this screen.
@@ -121,7 +121,7 @@ export class Component {
    */
   protected keyBindings: Map<string, KeyEvent> = new Map();
 
-  constructor() { }
+  constructor() {}
 
   static register(wm: WindowManager) {
     const el = new this();
@@ -140,7 +140,7 @@ export class Component {
   }
 
   /** Handle screen render logic. Called when component registered. */
-  render(): void { }
+  render(): void {}
   /** When the component mounted to the screen. */
   onComponentMount(): void {
     this.keyBindings.forEach((cb, key) => {
@@ -155,7 +155,7 @@ export class Component {
   }
 
   /** When the component is registered into the window manager. */
-  onComponentRegister(): void { }
+  onComponentRegister(): void {}
   /** Register a callback to a keypress. */
   registerKeyBinding(key: string, cb: KeyEvent): void;
   /** Register a callback to multiple keys. */

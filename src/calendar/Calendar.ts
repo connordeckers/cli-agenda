@@ -20,7 +20,7 @@ const getToken = (account: string) =>
     return j as OAuth2Token;
   });
 
-type TCal = MicrosoftCalendar | GoogleCalendar;
+export type TCal = MicrosoftCalendar | GoogleCalendar;
 
 const map = {
   ms: MicrosoftCalendar,

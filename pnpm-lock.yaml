@@ -1,5 +1,6 @@
 dependencies:
   '@microsoft/microsoft-graph-client': 2.0.0
+  '@types/node-cron': 2.0.3
   blessed: 0.1.81
   chalk: 4.1.0
   dayjs: 1.9.1
@@ -8,6 +9,7 @@ dependencies:
   google-auth-library: 6.1.0
   googleapis: 60.0.1
   keytar: 6.0.1
+  node-cron: 2.0.3
   open: 7.3.0
   simple-oauth2: 4.1.0
   superagent: 6.1.0
@@ -156,6 +158,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Jus9s4CDbqwocc5pOAnh8ShfrnMcPHuJYzVcSUU7lrh8Ni5HuIqX3oilL86p3dlTrk0LzHRCgA/GQ7uNCw6l2Q==
+  /@types/node-cron/2.0.3:
+    dependencies:
+      '@types/tz-offset': 0.0.0
+    dev: false
+    resolution:
+      integrity: sha512-gwBBGeY2XeYBLE0R01K9Sm2hvNcPGmoloL6aqthA3QmBB1GYXTHIJ42AGZL7bdXBRiwbRV8b6NB5iKpl20R3gw==
   /@types/node/14.11.2:
     dev: true
     resolution:
@@ -182,6 +190,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-xAgkb2CMWUMCyVc/3+7iQfOEBE75NvuZeezvmixbUw3nmENf2tCnQkW5yQLTYqvXUQ+R6EXxdqKKbal2zM5V/g==
+  /@types/tz-offset/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-XLD/llTSB6EBe3thkN+/I0L+yCTB6sjrcVovQdx2Cnl6N6bTzHmwe/J8mWnsXFgxLrj/emzdv8IR4evKYG2qxQ==
   /@types/uuid/8.3.0:
     dev: true
     resolution:
@@ -1362,6 +1374,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+D4s2HCnxPd5PjjI0STKwncjXTUKKqm74MDMz9OPXavjsGmjkvwgLtA5yoxJUdmpj52+2u+RrXgPipahKczMKg==
+  /node-cron/2.0.3:
+    dependencies:
+      opencollective-postinstall: 2.0.3
+      tz-offset: 0.0.1
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-eJI+QitXlwcgiZwNNSRbqsjeZMp5shyajMR81RZCqeW0ZDEj4zU9tpd4nTh/1JsBiKbF8d08FCewiipDmVIYjg==
   /node-fetch/2.6.1:
     dev: false
     engines:
@@ -1459,6 +1481,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-mgLwQIx2F/ye9SmbrUkurZCnkoXyXyu9EbHtJZrICjVAJfyMArdHp3KkixGdZx1ZHFPNIwl0DDM1dFFqXbTLZw==
+  /opencollective-postinstall/2.0.3:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
   /p-cancelable/1.1.0:
     dev: true
     engines:
@@ -1947,6 +1974,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
+  /tz-offset/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-kMBmblijHJXyOpKzgDhKx9INYU4u4E1RPMB0HqmKSgWG8vEcf3exEfLh4FFfzd3xdQOw9EuIy/cP0akY6rHopQ==
   /undefsafe/2.0.3:
     dependencies:
       debug: 2.6.9
@@ -2066,6 +2097,7 @@ specifiers:
   '@types/blessed': ^0.1.17
   '@types/express': ^4.17.8
   '@types/node': ^14.11.2
+  '@types/node-cron': ^2.0.3
   '@types/superagent': ^4.1.10
   '@types/uuid': ^8.3.0
   blessed: ^0.1.81
@@ -2076,6 +2108,7 @@ specifiers:
   google-auth-library: ^6.1.0
   googleapis: ^60.0.1
   keytar: ^6.0.1
+  node-cron: ^2.0.3
   nodemon: ^2.0.4
   open: ^7.3.0
   simple-oauth2: ^4.1.0
